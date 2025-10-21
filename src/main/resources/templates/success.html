@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org">
+
+<head th:replace="~{base::head}">
+
+</head>
+
+<body>
+	<!-- Navbar Start -->
+	<div th:replace="~{base::navbar}"></div>
+	<!-- Navbar End -->
+
+	<!-- Page Header Start -->
+	<div th:replace="~{base :: header(text ='Success')}"></div>
+	<!-- Page Header End -->
+
+	<!-- Success Start -->
+	<div class="container-fluid py-5">
+		<div class="d-flex justify-content-center align-items-center"
+			style="min-height: 80vh;">
+			<div class="card shadow-lg border-0 rounded-3" style="width: 40rem;">
+				<div class="card-body">
+					<h4 class="card-title text-primary mb-3 text-center">Booking Detail</h4>
+					<ul class="list-group list-group-flush">
+						<li class="list-group-item"><strong>Name:</strong> <span
+							th:text="${booked.name}"></span></li>
+						<li class="list-group-item"><strong>Phone:</strong> <span
+							th:text="${booked.phoneNumber}"></span></li>
+						<li class="list-group-item"><strong>Email:</strong> <span
+							th:text="${booked.email}"></span></li>
+						<li class="list-group-item"><strong>Date:</strong> <span
+							th:text="${booked.date}"></span></li>
+						<li class="list-group-item"><strong>Time:</strong> <span
+							th:text="${booked.time}"></span></li>
+						<li class="list-group-item"><strong>Persons:</strong> <span
+							th:text="${booked.person}"></span></li>
+					</ul>
+				</div>
+				<div class="card-footer text-white text-center" style="background-color: #46230a;">
+					Your booking has been successfully saved!</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Success End -->
+
+
+	<!-- Footer Start -->
+	<div th:replace="~{base :: footer}"></div>
+	<!-- Footer End -->
+
+
+	<!-- Back to Top -->
+	<div th:replace="~{base :: script}"></div>
+</body>
+
+</html>
